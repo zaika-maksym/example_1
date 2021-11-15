@@ -1,148 +1,183 @@
 body {
-    margin: 0;
-    padding: 0;
-} 
+  margin: 0;
+  padding: 0;
+}
 
 ul,
 ol {
-    text-decoration: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper {
+:root {
+  --body-shadow-color: 0px 0 5px 5px #535353;
+  --aside_background-color: #e9e9e9;
+  --aside_name-color: #ffffff;
+  --svg-size-color: #505575;
+  --foto-border-color: 3px solid #ffffff;
+  --foto-object-border: 2px solid #ffffff;
+  --about-me-background-color: #d5d5d5;
+  --specific-list-text-background-color: #636363;
+  --job-experience-background-color: #d5d5d5;
+  --place-job-color: #777684;
+  --skill-area-background-color: #d5d5d5;
+  --button-background-color: #505575;
+  --button-color: #d5d5d5;
+  --button-hover-shadow: 2px 2px 3px 2px #505575;
+  --button-hover-background-color: #ffffff;
+  --button-hover-color: #505575;
+}
+
+/* .wrapper {
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 850px;
+  display: flex;
+  box-shadow: var(--body-shadow-color);
+} */
+
+@media screen and (min-width: 320px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 5px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 850px;
-    display: flex;
-    /*border: 2px solid #000;*/
-    box-shadow: 0px 0 5px 5px #535353;
-    
+    box-shadow: var(--body-shadow-color);
+  }
 
-}
-
-.aside {
+  .aside {
+    margin: auto;
     display: flex;
-    width: 275px;
+    justify-content: center;
+    width: 350px;
     flex-direction: column;
     background-image: url(../img/1.-CV-Oksana-Bondarenko-Edinburgh.jpg);
     background-position-x: center;
     background-repeat: no-repeat;
-    background-color: #e9e9e9;
-}
+    background-color: var(--aside_background-color);
+    border-radius: 5px 0px 0px 5px;
+  }
 
+  .aside_title {
+    padding-top: 35px;
+  }
 
-
-.aside_name {
+  .aside_name {
+    display: flex;
+    text-align: center;
     width: 170px;
-    margin-top: 30px;
-    margin-left: 45px;
+    margin: auto;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--aside_name-color);
     font-size: 19px;
     font-family: roboto;
     font-weight: 500;
-    display: flex;
-    text-align: center;
-}
+  }
 
-.aside_personal_info {
+  .aside_personal_info {
     margin-top: 50px;
-}
+  }
 
-.personal_info_title {
+  .personal_info_title {
     font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2px;
     margin-left: 20px;
-}
+  }
 
-
-
-.personal_info_adress {
+  .personal_info_adress {
     width: 150px;
-    
-}
+  }
 
-.personal-style-text {
+  .personal-style-text {
     font-family: Roboto;
     font-weight: 500;
-    
-}
+  }
 
-
-.adress_title {
+  .adress_title {
     text-transform: capitalize;
     display: flex;
     align-items: center;
-}
+  }
 
-.style-text {
+  .style-text {
     font-family: Roboto;
     font-weight: 300;
     font-size: 15px;
     margin-left: 50px;
     margin-top: 5px;
     margin-bottom: 15px;
-}
+  }
 
-.phone_title {
+  .phone_title {
     display: flex;
     align-items: center;
-}
+  }
 
+  .link {
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 15px;
+    color: #000000;
+  }
 
-.aside_interest_info {
+  .link:hover {
+    text-shadow: 1px 1px 2px #000, 0 0 1em #505575;
+    color: #d5d5d5;
+  }
+
+  .aside_interest_info {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-}
+  }
 
-
-.interests_text {
+  .interests_text {
     font-family: Roboto;
     font-weight: 300;
     font-size: 15px;
     margin-left: 1px;
     letter-spacing: 1px;
-}
+  }
 
-.interest_title {
+  .interest_title {
     margin-bottom: 20px;
     margin-top: 20px;
-}
+  }
 
-.email_title {
+  .email_title {
     text-transform: capitalize;
     display: flex;
     align-items: center;
-    
-}
+  }
 
-
-.birthday_title {
-    
+  .birthday_title {
     display: flex;
     align-items: center;
-}
+  }
 
-.svg-size {
+  .svg-size {
     width: 16px;
     height: 16px;
     margin-left: 19px;
     margin-right: 15px;
-    color: #505575;
-}
+    color: var(--svg-size-color);
+  }
 
-.foto {
+  .foto {
     display: flex;
     height: 105px;
     width: 105px;
@@ -151,222 +186,1313 @@ p {
     background-size: 115px;
     background-repeat: no-repeat;
     border-radius: 100%;
-    border: 3px solid #ffffff;
+    border: var(--foto-border-color);
     margin-left: 75px;
     margin-top: 40px;
-}
+  }
 
-
-.foto-object {
+  .foto-object {
     display: flex;
     width: 105px;
-    height: 150px; 
+    height: 150px;
     border-radius: 100%;
-    border: 2px solid #ffffff;  
-}
+    border: var(--foto-object-border);
+  }
 
-
-.languages-text {
+  .languages-text {
     font-family: Roboto;
     font-weight: 500;
     font-size: 15px;
     margin-left: 20px;
     margin-bottom: 5px;
     letter-spacing: 1px;
-}
+  }
 
-
-.languages_title {
+  .languages_title {
     margin-top: 20px;
     margin-bottom: 20px;
-}
+  }
 
-.svg-size-lang {
+  .svg-size-lang {
     display: inline-flex;
     width: 16x;
     height: 16px;
-}
+  }
 
-
-
-.aside_languages_ua {
+  .aside_languages_ua {
     display: inline-flex;
     flex-direction: row-reverse;
-    
+  }
 
-}
-
-.aside_languages_en {
+  .aside_languages_en {
     display: inline-flex;
     flex-direction: row-reverse;
-}
+  }
 
-.lang-box {
+  .lang-box {
     margin-right: 45px;
     margin-top: 0px;
     margin-bottom: 0px;
-}
+  }
 
-.aside_languages {
-    padding-bottom: 300px;
-}
+  .aside_languages {
+    padding-bottom: 1px;
+  }
 
-
-.about-me {
+  .about-me {
     margin-left: 20px;
     margin-top: 30px;
-}
-.about-me-text {
+  }
+
+  .about-me-text {
     display: flex;
     width: 530px;
     font-family: Roboto;
     font-weight: 300;
     font-size: 15px;
-}
+  }
 
-.about-me:after {
+  .about-me:after {
     content: '';
     margin-top: 20px;
     display: flex;
     width: 100%;
     height: 2px;
-    background-color: #d5d5d5;
-}
+    background-color: var(--about-me-background-color);
+  }
 
-.job-experience {
+  .job-experience {
     width: 530px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
-}
-.job-experience-title {
+  }
+  .job-experience-title {
     display: flex;
     margin-top: 20px;
-}
+  }
 
-.main-info_title {
+  .main-info_title {
     font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2px;
-}
+  }
 
-
-.job-experience-position {
+  .job-experience-position {
     font-family: Roboto;
     font-weight: 500;
     margin-top: 15px;
+  }
 
-}
-
-.job-term {
+  .job-term {
     margin-top: 15px;
     font-family: Roboto;
     font-size: 15px;
-}
+  }
 
-
-.place-job {
+  .place-job {
     font-family: Roboto;
-    color: #777684;
+    color: var(--place-job-color);
     margin-top: 5px;
     margin-bottom: 10px;
-}
+  }
 
-.specific {
+  .specific {
     display: flex;
     flex-direction: column;
-}
+  }
 
-.specific-list-text {
+  .specific-list-text {
     display: flex;
     align-items: center;
     font-family: Roboto;
     font-weight: 400;
     font-size: 13px;
-}
+  }
 
-.specific-list-text:before {
+  .specific-list-text:before {
     content: '';
     display: flex;
     width: 5px;
     height: 5px;
-    background-color: #636363;
+    background-color: var(--specific-list-text-background-color);
     margin-right: 15px;
     border-radius: 100%;
-}
+  }
 
-
-.job-experience:after {
+  .job-experience:after {
     content: '';
     margin-top: 20px;
     display: flex;
     width: 100%;
     height: 2px;
-    background-color: #d5d5d5;
-}
+    background-color: var(--job-experience-background-color);
+  }
 
-.courses-list-text {
+  .courses-list-text {
     display: flex;
     align-items: center;
     font-family: Roboto;
     font-weight: 400;
     font-size: 13px;
-}
+  }
 
-
-.skills {
+  .skills {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
+  }
 
-
-.skills-box {
+  .skills-box {
     margin-right: 99px;
     margin-top: 0px;
     margin-bottom: 0px;
-}
+  }
 
-
-.skill-area {
+  .skill-area {
     padding-bottom: 20px;
     margin-left: 20px;
-}
+  }
 
-.skill-area:after {
+  .skill-area:after {
     content: '';
     margin-top: 20px;
     display: flex;
     width: 100%;
     height: 2px;
-    background-color: #d5d5d5;
-}
+    background-color: var(--skill-area-background-color);
+  }
 
-.skills_info_title {
+  .skills_info_title {
     font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2px;
     /* margin-left: 20px; */
-}
+  }
 
-
-.skills-text {
+  .skills-text {
     font-family: Roboto;
     font-weight: 500;
     font-size: 15px;
     /* margin-left: 20px; */
     margin-bottom: 5px;
     letter-spacing: 1px;
-}
+  }
 
-
-
-.reference {
+  .reference {
     width: 530px;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-bottom: 100px;
+  }
+
+  .download-pdf {
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  .button {
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-family: Roboto;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    width: 130px;
+    height: 35px;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+  }
+
+  .button:hover {
+    box-shadow: var(--button-hover-shadow);
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+  }
+
+  .aside {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    background-image: url(../img/1.-CV-Oksana-Bondarenko-Edinburgh.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: var(--aside_background-color);
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .aside_name {
+    width: 170px;
+    margin-top: 30px;
+    margin: auto;
+    text-transform: uppercase;
+    color: var(--aside_name-color);
+    font-size: 19px;
+    font-family: roboto;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+  }
+
+  .aside_personal_info {
+    margin-top: 50px;
+  }
+
+  .personal_info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 20px;
+  }
+
+  .personal_info_adress {
+    width: 150px;
+  }
+
+  .personal-style-text {
+    font-family: Roboto;
+    font-weight: 500;
+  }
+
+  .adress_title {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+  }
+
+  .style-text {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .phone_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .aside_interest_info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .interests_text {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 1px;
+    letter-spacing: 1px;
+  }
+
+  .interest_title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .email_title {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+  }
+
+  .birthday_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .svg-size {
+    width: 16px;
+    height: 16px;
+    margin-left: 19px;
+    margin-right: 15px;
+    color: var(--svg-size-color);
+  }
+
+  .foto {
+    display: flex;
+    height: 105px;
+    width: 105px;
+    background-image: url(../img/jeniffer_love_medium.webp);
+    background-position: top;
+    background-size: 115px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: var(--foto-border-color);
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  .foto-object {
+    display: flex;
+    width: 105px;
+    height: 150px;
+    border-radius: 100%;
+    border: var(--foto-object-border);
+  }
+
+  .languages-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .languages_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .svg-size-lang {
+    display: inline-flex;
+    width: 16x;
+    height: 16px;
+  }
+
+  .aside_languages_ua {
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  .aside_languages_en {
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  .lang-box {
+    margin-right: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .aside_languages {
+    padding-bottom: 1px;
+  }
+
+  .about-me {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  .about-me-text {
+    display: flex;
+    text-align: justify;
+    width: 310px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .about-me:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--about-me-background-color);
+  }
+
+  .job-experience {
+    display: none;
+    width: 530px;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .job-experience1 {
+    display: flex;
+    width: 325px;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .job-experience-title {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .job-experience1:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--job-experience-background-color);
+  }
+
+  .main-info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .job-experience-position {
+    font-family: Roboto;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+
+  .job-term {
+    margin-top: 15px;
+    font-family: Roboto;
+    font-size: 15px;
+  }
+
+  .place-job {
+    font-family: Roboto;
+    color: var(--place-job-color);
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .specific {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .specific-list-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .specific-list-text:before {
+    content: '';
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: var(--specific-list-text-background-color);
+    margin-right: 7px;
+    border-radius: 100%;
+  }
+
+  .job-experience:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--job-experience-background-color);
+  }
+
+  .courses-list-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-box {
+    margin-right: 99px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .skill-area {
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .skill-area:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--skill-area-background-color);
+  }
+
+  .skills_info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* margin-left: 20px; */
+  }
+
+  .skills-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    /* margin-left: 20px; */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .reference {
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+
+  .download-pdf {
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  .button {
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-family: Roboto;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    width: 130px;
+    height: 35px;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+  }
+
+  .button:hover {
+    box-shadow: var(--button-hover-shadow);
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+  }
+}
+
+/* @media (min-width: 480px) and (max-width: 869px) {
+  .wrapper {
+    background-color: aqua;
+  }
+} */
+
+@media (min-width: 871px) {
+  .wrapper {
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: var(--body-shadow-color);
+  }
+
+  .aside {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 850px;
+    flex-direction: row;
+    background-image: url(../img/1.-CV-Oksana-Bondarenko-Edinburgh.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: var(--aside_background-color);
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .aside_title {
+    padding-top: 0px;
+  }
+
+  .aside_name {
+    width: 170px;
+    margin-top: -1px;
+    margin-left: 45px;
+    text-transform: uppercase;
+    color: var(--aside_name-color);
+    font-size: 19px;
+    font-family: roboto;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+  }
+
+  .aside_personal_info {
+    margin-top: 50px;
+  }
+
+  .personal_info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 20px;
+  }
+
+  .personal_info_adress {
+    width: 150px;
+  }
+
+  .personal-style-text {
+    font-family: Roboto;
+    font-weight: 500;
+  }
+
+  .adress_title {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+  }
+
+  .style-text {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .phone_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .aside_interest_info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .interests_text {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 1px;
+    letter-spacing: 1px;
+  }
+
+  .interest_title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .email_title {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+  }
+
+  .birthday_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .svg-size {
+    width: 16px;
+    height: 16px;
+    margin-left: 19px;
+    margin-right: 15px;
+    color: var(--svg-size-color);
+  }
+
+  .foto {
+    display: flex;
+    height: 105px;
+    width: 105px;
+    background-image: url(../img/jeniffer_love_medium.webp);
+    background-position: top;
+    background-size: 115px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: var(--foto-border-color);
+    margin-left: 75px;
+    margin-top: 14px;
+  }
+
+  .foto-object {
+    display: flex;
+    width: 105px;
+    height: 150px;
+    border-radius: 100%;
+    border: var(--foto-object-border);
+  }
+
+  .languages-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .languages_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .svg-size-lang {
+    display: inline-flex;
+    width: 16x;
+    height: 16px;
+  }
+
+  .aside_languages_ua {
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  .aside_languages_en {
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  .lang-box {
+    margin-right: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .aside_languages {
+    padding-bottom: 1px;
+  }
+
+  .about-me {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  .about-me-text {
+    display: flex;
+    width: 530px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .about-me:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--about-me-background-color);
+  }
+
+  .job-experience1 {
+    display: none;
+  }
+
+  .job-experience {
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .job-experience-title {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .main-info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .job-experience-position {
+    font-family: Roboto;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+
+  .job-term {
+    margin-top: 15px;
+    font-family: Roboto;
+    font-size: 15px;
+  }
+
+  .place-job {
+    font-family: Roboto;
+    color: var(--place-job-color);
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .specific {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .specific-list-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .specific-list-text:before {
+    content: '';
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: var(--specific-list-text-background-color);
+    margin-right: 15px;
+    border-radius: 100%;
+  }
+
+  .job-experience:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--job-experience-background-color);
+  }
+
+  .courses-list-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-box {
+    margin-right: 99px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .skill-area {
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .skill-area:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--skill-area-background-color);
+  }
+
+  .skills_info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* margin-left: 20px; */
+  }
+
+  .skills-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    /* margin-left: 20px; */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .reference {
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+
+  .download-pdf {
+    margin-left: 20px;
+    margin-top: 350px;
+  }
+
+  .button {
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-family: Roboto;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    width: 130px;
+    height: 35px;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+  }
+
+  .button:hover {
+    box-shadow: var(--button-hover-shadow);
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+  }
+
+  .aside {
+    display: flex;
+    width: 275px;
+    flex-direction: column;
+    background-image: url(../img/1.-CV-Oksana-Bondarenko-Edinburgh.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: var(--aside_background-color);
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .aside_name {
+    width: 170px;
+    margin-top: 30px;
+    margin-left: 45px;
+    text-transform: uppercase;
+    color: var(--aside_name-color);
+    font-size: 19px;
+    font-family: roboto;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+  }
+
+  .aside_personal_info {
+    margin-top: 50px;
+  }
+
+  .personal_info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 20px;
+  }
+
+  .personal_info_adress {
+    width: 150px;
+  }
+
+  .personal-style-text {
+    font-family: Roboto;
+    font-weight: 500;
+  }
+
+  .adress_title {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+  }
+
+  .style-text {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .phone_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .aside_interest_info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .interests_text {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 1px;
+    letter-spacing: 1px;
+  }
+
+  .interest_title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .email_title {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+  }
+
+  .birthday_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .svg-size {
+    width: 16px;
+    height: 16px;
+    margin-left: 19px;
+    margin-right: 15px;
+    color: var(--svg-size-color);
+  }
+
+  .foto {
+    display: flex;
+    height: 105px;
+    width: 105px;
+    background-image: url(../img/jeniffer_love_medium.webp);
+    background-position: top;
+    background-size: 115px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: var(--foto-border-color);
+    margin-left: 75px;
+    margin-top: 14px;
+  }
+
+  .foto-object {
+    display: flex;
+    width: 105px;
+    height: 150px;
+    border-radius: 100%;
+    border: var(--foto-object-border);
+  }
+
+  .languages-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .languages_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .svg-size-lang {
+    display: inline-flex;
+    width: 16x;
+    height: 16px;
+  }
+
+  .aside_languages_ua {
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  .aside_languages_en {
+    display: inline-flex;
+    flex-direction: row-reverse;
+  }
+
+  .lang-box {
+    margin-right: 45px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .aside_languages {
+    padding-bottom: 1px;
+  }
+
+  .about-me {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  .about-me-text {
+    display: flex;
+    width: 530px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .about-me:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--about-me-background-color);
+  }
+
+  .job-experience {
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .job-experience-title {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .main-info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .job-experience-position {
+    font-family: Roboto;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+
+  .job-term {
+    margin-top: 15px;
+    font-family: Roboto;
+    font-size: 15px;
+  }
+
+  .place-job {
+    font-family: Roboto;
+    color: var(--place-job-color);
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .specific {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .specific-list-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .specific-list-text:before {
+    content: '';
+    display: flex;
+    width: 5px;
+    height: 5px;
+    background-color: var(--specific-list-text-background-color);
+    margin-right: 15px;
+    border-radius: 100%;
+  }
+
+  .job-experience:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--job-experience-background-color);
+  }
+
+  .courses-list-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-box {
+    margin-right: 99px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .skill-area {
+    padding-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .skill-area:after {
+    content: '';
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--skill-area-background-color);
+  }
+
+  .skills_info_title {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* margin-left: 20px; */
+  }
+
+  .skills-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    /* margin-left: 20px; */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+
+  .reference {
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+
+  .download-pdf {
+    margin-left: 20px;
+    margin-top: 350px;
+  }
+
+  .button {
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    font-size: 13px;
+    font-family: Roboto;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    width: 130px;
+    height: 35px;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+  }
+
+  .button:hover {
+    box-shadow: var(--button-hover-shadow);
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+  }
 }
